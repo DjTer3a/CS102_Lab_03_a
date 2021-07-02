@@ -19,6 +19,26 @@ public class shapeContainer {
         }
         return Area;
     }
+
+    public shape firstShape(int x, int y){
+        for(int a = 0 ; a< shapesContainer.size(); a++){
+            
+            if( shapesContainer.get(a).contains(x,y) ){
+            shapesContainer.get(a).setSelected(true);
+            return shapesContainer.get(a);
+            }
+        }
+        return null;
+
+    }
+
+    public void remove(){
+        for(int a = 0 ; a< shapesContainer.size(); a++){
+            if(shapesContainer.get(a).getSelected() == true){
+                shapesContainer.remove(a);
+            }
+        }
+    }
     
     public String toString() {
         String string = "";
