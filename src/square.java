@@ -24,7 +24,7 @@ public class square extends rectangle{
 
     public String toString() {
         String string;
-        string = this.getClass().getSimpleName()+ " has  length = " + length;
+        string = this.getClass().getSimpleName() + " has co-ordinates of "+x+" and "+y+ " has  length = " + length;
 
         if(selected){
             System.out.println("Shape selected");

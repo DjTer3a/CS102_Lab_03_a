@@ -40,7 +40,7 @@ public class rectangle extends shape{
         else{
             System.out.println("Shape not selected");
         }
-        string = this.getClass().getSimpleName()+ ", Height = " + Height + " and Width = " + Width;
+        string = this.getClass().getSimpleName()+ " has co-ordinates of "+x+" and "+y+  ", Height = " + Height + " and Width = " + Width;
         return string;
     }
 

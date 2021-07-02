@@ -25,7 +25,7 @@ public class circle extends shape{
     
     public String toString() {
         String string;
-        string = this.getClass().getSimpleName()+ " has Radius = " + Radius;
+        string = this.getClass().getSimpleName()+ " has co-ordinates of "+x+" and "+y+ " has Radius = " + Radius;
 
 
         if(selected){

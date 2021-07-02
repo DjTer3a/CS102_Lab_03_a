@@ -5,7 +5,7 @@ public class shapeTester {
     public static void main( String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-        int choice, choice2, temp, temp1, temp2,x,y;
+        int choice, choice2, temp, temp1, temp2,temp3,temp4,temp5,x,y;
         shapeContainer container = null;
         rectangle rectangle;
         circle circle;
@@ -61,13 +61,19 @@ public class shapeTester {
                         container.add(circle);
                     }
                     if(choice2 == 4){
-                        System.out.println("Enter first side of Triangle");
+                        System.out.println("Enter x of  first side of Triangle");
                         temp = scan.nextInt();
-                        System.out.println("Enter second side of Triangle");
+                        System.out.println("Enter y of first side of Triangle");
                         temp1 = scan.nextInt();
-                        System.out.println("Enter third side of Triangle");
+                        System.out.println("Enter x of second side of Triangle");
                         temp2 = scan.nextInt();
-                        triangle = new triangle(temp,temp1,temp2);
+                        System.out.println("Enter y of second side of Triangle");
+                        temp3 = scan.nextInt();
+                        System.out.println("Enter x of third side of Triangle");
+                        temp4 = scan.nextInt();
+                        System.out.println("Enter y of third side of Triangle");
+                        temp5 = scan.nextInt();
+                        triangle = new triangle(temp,temp1,temp2,temp3,temp4,temp5);
                         container.add(triangle);
                     }
 
