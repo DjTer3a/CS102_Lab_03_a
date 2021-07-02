@@ -4,6 +4,7 @@ public class circle extends shape{
 
     public circle(int Radius){
         this.Radius=Radius;
+        setLocation(x, y);
     }
 
     public double getArea(){
@@ -25,7 +26,25 @@ public class circle extends shape{
     public String toString() {
         String string;
         string = this.getClass().getSimpleName()+ " has Radius = " + Radius;
+
+
+        if(selected){
+            System.out.println("Shape selected");
+        }
+        else{
+            System.out.println("Shape not selected");
+        }
         return string;
     }
+
+    public boolean contains(int x, int y){
+        if( getX()<=x && x <= (getX() + Radius) && getY() <=y && y <= (getY()+Radius) && x >= (getX() - Radius) && y >= (getY()-Radius)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 }

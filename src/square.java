@@ -4,6 +4,7 @@ public class square extends rectangle{
     public square(int length){
         super(length, length);
         this.length=length;
+        setLocation(x, y);
     }
 
     public double getArea(){
@@ -24,6 +25,23 @@ public class square extends rectangle{
     public String toString() {
         String string;
         string = this.getClass().getSimpleName()+ " has  length = " + length;
+
+        if(selected){
+            System.out.println("Shape selected");
+        }
+        else{
+            System.out.println("Shape not selected");
+        }
         return string;
     }
+
+    public boolean contains(int x, int y){
+        if( getX()<=x && x <= (getX() + length) && getY() <=y && y <= (getY()+length)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }

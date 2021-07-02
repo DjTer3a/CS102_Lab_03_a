@@ -7,7 +7,7 @@ public class rectangle extends shape{
     public rectangle(int Height, int Width ){
         this.Height=Height;
         this.Width=Width;
-
+        setLocation(x, y);
     }
 
     public double getArea( ){
@@ -32,8 +32,25 @@ public class rectangle extends shape{
 
     public String toString() {
         String string;
+
+
+        if(selected){
+            System.out.println("Shape selected");
+        }
+        else{
+            System.out.println("Shape not selected");
+        }
         string = this.getClass().getSimpleName()+ ", Height = " + Height + " and Width = " + Width;
         return string;
+    }
+
+    public boolean contains(int x, int y){
+        if( getX()<=x && x <= (getX() + Width) && getY() <=y && y <= (getY()+Height)){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }
