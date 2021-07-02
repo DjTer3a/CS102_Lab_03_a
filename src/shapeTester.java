@@ -5,7 +5,7 @@ public class shapeTester {
     public static void main( String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-        int choice, choice2, temp, temp1, temp2;
+        int choice, choice2, temp, temp1, temp2,x,y;
         shapeContainer container = null;
         rectangle rectangle;
         circle circle;
@@ -19,7 +19,10 @@ public class shapeTester {
             System.out.println("Press 1 to create container");
             System.out.println("Press 2 to add a shape");
             System.out.println("Press 3 to print container");
-            System.out.println("Press 4 to EXIT");
+            System.out.println("Press 4 to print the container details");
+            System.out.println("Press 5 to get details of the first shape from coordinates");
+            System.out.println("Press 6 to delete a shape");
+            System.out.println("Press 7 to EXIT");
             choice = scan.nextInt();
 
             if(choice == 1){
@@ -44,20 +47,20 @@ public class shapeTester {
                         container.add(rectangle);
                     }
 
-                    else if(choice2 == 2){
+                    if(choice2 == 2){
                         System.out.println("Enter side of Square");
                         temp = scan.nextInt();
                         square = new square(temp);
                         container.add(square);
                     }
 
-                    else if(choice2 == 3){
+                    if(choice2 == 3){
                         System.out.println("Enter radius of Circle");
                         temp = scan.nextInt();
                         circle = new circle(temp);
                         container.add(circle);
                     }
-                    else if(choice2 == 4){
+                    if(choice2 == 4){
                         System.out.println("Enter first side of Triangle");
                         temp = scan.nextInt();
                         System.out.println("Enter second side of Triangle");
@@ -79,8 +82,32 @@ public class shapeTester {
                     System.out.println("Total Surface area = 0");
                 }
             }
+
+            if (choice == 4){
+                System.out.println(container.toString());
+            }
+
+            if (choice == 5){
+                System.out.println("Enter x - axis value");
+                x =scan.nextInt();
+                System.out.println("Enter y - axis value");
+                y =scan.nextInt();
+                if (container.firstShape(x, y) == null){
+                    System.out.println("Choose other co-ordinates");
+                }
+                else{
+                    System.out.println(container.firstShape(x, y).toString()); 
+                }
+            }
+
+            if (choice == 6){
+                container.remove();
+                System.out.println("You deleted the shape");
+            
+            
+            }
         }
-        while(choice != 4); 
+        while(choice != 7); 
 
 
 
