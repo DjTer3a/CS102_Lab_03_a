@@ -6,11 +6,11 @@ public class circle extends shape{
         this.Radius=Radius;
     }
 
-    public double getArea(){
-        double Area;
-        Area =  Math.PI * Math.pow(Radius, 2);
-        return Area;
-    }
+    // public double getArea(){
+    //     double Area;
+    //     Area =  Math.PI * Math.pow(Radius, 2);
+    //     return Area;
+    // }
 
     public double getPerimeter(){
         double Perimeter;
@@ -22,4 +22,10 @@ public class circle extends shape{
         return Radius;
     }
     
+    public String toString() {
+        String string;
+        string = this.getClass().getSimpleName()+ " has Radius = " + Radius;
+        return string;
+    }
+
 }

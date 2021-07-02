@@ -29,4 +29,11 @@ public class rectangle extends shape{
     public int getWidth(){
         return Width;
     }
+
+    public String toString() {
+        String string;
+        string = this.getClass().getSimpleName()+ ", Height = " + Height + " and Width = " + Width;
+        return string;
+    }
+
 }

@@ -17,5 +17,13 @@ public class square extends rectangle{
     }
 
     public int getSideLength(){
-        return length;
+        return length;  
+    }
+
+
+    public String toString() {
+        String string;
+        string = this.getClass().getSimpleName()+ " has  length = " + length;
+        return string;
+    }
 }

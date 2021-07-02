@@ -9,7 +9,8 @@ public class triangle extends shape{
 
     public double getArea(){
         double s = (a+b+c)/2;
-        double Area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        double squaring = (s*(s-a)*(s-b)*(s-c));
+        double Area = Math.sqrt(squaring);
         return Area;
     }
 
