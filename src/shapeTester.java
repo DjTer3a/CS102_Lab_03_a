@@ -16,7 +16,7 @@ public class shapeTester {
     public static void main( String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-        int choice, choice2, temp, temp1, temp2,temp3,temp4,temp5,x,y;
+        int choice, choice2, temp, temp1, temp2,temp3,temp4,temp5,x,y,x1,y1,x2,y2,x3,y3,x4,y4;
         shapeContainer container = null;
         rectangle rectangle;
         circle circle;
@@ -54,21 +54,37 @@ public class shapeTester {
                         temp = scan.nextInt();
                         System.out.println("Enter width of Rectangle");
                         temp1 = scan.nextInt();
+                        System.out.println("Enter the x- axis co-ordinate of the Rectangle");
+                        x1 = scan.nextInt();
+                        System.out.println("Enter the y- axis co-ordinate of the Rectangle");
+                        y1 = scan.nextInt();
                         rectangle = new rectangle(temp, temp1);
+                        rectangle.setLocation(x1, y1);
                         container.add(rectangle);
                     }
 
                     if(choice2 == 2){
                         System.out.println("Enter side of Square");
                         temp = scan.nextInt();
+                        System.out.println("Enter the x- axis co-ordinate of Square");
+                        x2 = scan.nextInt();
+                        System.out.println("Enter the y- axis co-ordinate of the Square");
+                        y2 = scan.nextInt();
                         square = new square(temp);
+                        square.setLocation(x2, y2);
                         container.add(square);
                     }
 
                     if(choice2 == 3){
                         System.out.println("Enter radius of Circle");
                         temp = scan.nextInt();
+                        System.out.println("Enter the x- axis co-ordinate of Triangle");
+                        x3 = scan.nextInt();
+                        System.out.println("Enter the y- axis co-ordinate of the Triangle");
+                        y3 = scan.nextInt();
+
                         circle = new circle(temp);
+                        circle.setLocation(x3, y3);
                         container.add(circle);
                     }
                     if(choice2 == 4){
@@ -84,7 +100,16 @@ public class shapeTester {
                         temp4 = scan.nextInt();
                         System.out.println("Enter y of third side of Triangle");
                         temp5 = scan.nextInt();
+                        
+                        System.out.println("Enter the x- axis co-ordinate of Triangle");
+                        x4 = scan.nextInt();
+                        System.out.println("Enter the y- axis co-ordinate of the Triangle");
+                        y4 = scan.nextInt();
+
+
+
                         triangle = new triangle(temp,temp1,temp2,temp3,temp4,temp5);
+                        triangle.setLocation(x4, y4);
                         container.add(triangle);
                     }
 
@@ -105,9 +130,9 @@ public class shapeTester {
             }
 
             if (choice == 5){
-                System.out.println("Enter x - axis value");
+                System.out.println("Enter x -  axis co-ordinate value");
                 x =scan.nextInt();
-                System.out.println("Enter y - axis value");
+                System.out.println("Enter y -  axis co-ordinate value");
                 y =scan.nextInt();
                 if (container.firstShape(x, y) == null){
                     System.out.println("Choose other co-ordinates");

@@ -73,7 +73,7 @@ public class circle extends shape{
      *  @return boolean  
      */
     public boolean contains(int x, int y){
-        if( getX()<=x && x <= (getX() + Radius) && getY() <=y && y <= (getY()+Radius) && x >= (getX() - Radius) && y >= (getY()-Radius)){
+        if(( Math.pow((getX()-x),2) + Math.pow((getY()-y),2) ) <= Math.pow(Radius,2)){
             return true;
         }
         else {

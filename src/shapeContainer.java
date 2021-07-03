@@ -81,7 +81,7 @@ public class shapeContainer {
         int idx = 0;
 
         for (int a = 0; a <shapesContainer.size(); a++){
-            string += "Shape at the index : "+idx+" is a "+shapesContainer.get(a).toString()+ "  ";
+            string += "Shape at the index : "+idx+" is a "+shapesContainer.get(a).toString()+ "  \n";
             idx++;
         }
         return string;
